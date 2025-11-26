@@ -17,7 +17,7 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
@@ -30,4 +30,4 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - uses: actions/deploy-pages@v1
+      - uses: actions/deploy-pages@v4
